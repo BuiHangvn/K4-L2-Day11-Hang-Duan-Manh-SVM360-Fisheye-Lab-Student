@@ -1,0 +1,9 @@
+round: r1_craft
+slice: B3-dense
+sha256: e4653f46918342c6a43b2a307ba7557ba13cc5589e8c89bde2a2dbf5d04a33da
+code: E465-3F46
+locked_at: 2026-09-29T19:10:13+07:00
+shapes: box=19, polygon=10
+prefill_kept: 1
+prefill_edited: 0
+new: 18

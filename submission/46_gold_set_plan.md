@@ -2,17 +2,17 @@
 
 **Đầu bài:** 50.000 frame từ bốn camera SVM, ngân sách chọn 200 frame để review/gold. Đây là tình huống trên slide,
 **không phải** 50.000 frame có trong repo. Phân bổ đúng 200 ở `45_sampling_plan.csv` cho bốn camera, mỗi camera có
-normal và hard slice. “Gold set” ở đây là **kế hoạch tạo** reference sau kiểm chứng, không phải teaching reference
+normal và hard slice. "Gold set" ở đây là **kế hoạch tạo** reference sau kiểm chứng, không phải teaching reference
 ADASIND hoặc nhãn bạn vừa vẽ. Nếu cần, dùng `notebooks/day11-svm360-colab.ipynb` để thử tổng phân bổ; notebook
 không làm thay phần lý do.
 
 | camera_id | Hard case cần chọn | Vì sao dễ sai | Annotation space / calibration cần giữ | Cách review trước khi gọi là gold |
 |---|---|---|---|---|
-| front | TODO | TODO | TODO | TODO |
-| rear | TODO | TODO | TODO | TODO |
-| left | TODO | TODO | TODO | TODO |
-| right | TODO | TODO | TODO | TODO |
+| front | Ngược nắng cuối ngày + xe cắt ngang giữa làn + người qua đường ở ngã tư + đêm có đèn xe khác | Nắng chói làm mất box, xe cắt ngang qua zone center-edge nhanh, đêm phá recall nhóm Pedestrian/Bike; camera trước là input chính cho phanh khẩn cấp | Intrinsic + extrinsic calibration đầu xe; annotation space trên fisheye gốc (không undistort trước khi gán); ngưỡng H=40 giữ nguyên | 2 annotator độc lập vẽ + 1 QA đối chiếu; ca bất đồng escalate cho Lab Coach mở ảnh phóng to; chỉ gọi gold khi 3 người khớp về class và geometry IoU≥0.7 |
+| rear | Người đi ngang gần khi lùi + chướng vật thấp (cọc/thùng/xe đạp) + đêm chỉ có đèn phanh | Hậu quả lỗi FN khi lùi có thể va chạm; vật thấp <H bị bỏ theo R01 nhưng vẫn có tác động thực; đèn phanh trắng gây confusion class Car vs Truck | Calibration đuôi xe (có thể khác front vì góc gắn); vùng ego_body xe khác front (chỉ thấy cản sau/hộp số nếu có); nhãn Pedestrian phải phân biệt người thật với biển báo/phản chiếu | Tương tự front nhưng thêm 1 reviewer chuyên về ca đêm; tiêu chí gold: recall Pedestrian ≥95% trên bộ mẫu này trước khi chốt |
+| left | Motor/xe đạp len giữa 2 làn khi rẽ trái + seam với front-left và rear-left ở góc xe + blind spot khi chuyển làn | Motor vào blind spot bị model bỏ ở vùng edge camera trái; seam có 2 box cho cùng vật cần policy; văn hoá giao thông Ấn Độ có nhiều rickshaw len giữa | Timestamp đồng bộ giữa 3 camera (front-left, left, rear-left) để đối chiếu vùng seam; ego_body có thể có tay lái/gương chiếu hậu tuỳ rig | Reviewer cần đối chiếu cả 3 camera trong cùng timestamp; ca seam đánh dấu ưu tiên; policy cross-camera phải quyết trước khi gọi gold |
+| right | Người/xe rẽ vào ngã ba từ bên phải + seam với front-right/rear-right + curb gần khi đỗ + người trong hàng chờ ở lề | Motor rẽ vào từ bên phải là ca hay có TP muộn (model phát hiện chậm gây phanh gấp); curb sát gây confusion với ego_body; hàng người tĩnh cần crowd_or_group ignore | Tương tự left, cần timestamp đa camera; đặc biệt vùng thân xe bên phải có thể có gương hoặc tay lái phụ | Tương tự left; thêm ca crowd_or_group policy để reviewer thống nhất trước khi split thành box lẻ |
 
-- Khi nào cần refresh gold set (đổi camera, calibration hoặc rule): TODO
-- Một ca seam/cross-camera cần policy và evidence trước khi ghép hai box: TODO
-- Vì sao peer agreement hoặc quality report trên ảnh một camera chưa chứng minh gold set đúng cho cả bốn camera: TODO
+- **Khi nào cần refresh gold set (đổi camera, calibration hoặc rule)**: (a) khi thay camera/thay firmware → recalib toàn bộ 4 camera, chọn lại 200 frame mới vì zone/edge_zone khác; (b) khi rule R04 thay đổi mapping class → review lại toàn bộ ThreeWheeler/Truck; (c) khi cập nhật rig (đổi vị trí gắn camera) → ego_body scope đổi; (d) 6 tháng 1 lần refresh subset (10-15% mẫu) để bắt drift dữ liệu (thay đổi giao thông, biển báo, xe mới).
+- **Một ca seam/cross-camera cần policy và evidence trước khi ghép hai box**: motor rẽ trái ở ngã ba xuất hiện ở cả camera left (zone edge phải) và front (zone edge trái) trong cùng timestamp. Không được ghép thành 1 track hay xoá 1 box chỉ dựa vào IoU BEV — phải có (a) timestamp khớp ≤50ms giữa 2 camera, (b) calibration extrinsic để chiếu box về cùng hệ toạ độ, (c) policy đầu ra chọn "keep both với flag same_object_id" hoặc "merge sau BEV homography" (tuỳ downstream). Trước khi có 3 điều này, ghi 2 box riêng và escalate.
+- **Vì sao peer agreement hoặc quality report trên ảnh một camera chưa chứng minh gold set đúng cho cả bốn camera**: (a) mỗi camera có góc gắn/lens/ego_body khác nhau → luật vẽ có thể khác về ngưỡng edge_zone; (b) phân bố class khác nhau (front nhiều xe/biển báo, rear ít vật động, side nhiều motor/rickshaw); (c) độ méo fisheye khác nhau giữa các camera (nếu dùng khác lens); (d) peer agreement 2-3 người trên ADASIND chỉ chứng minh nhất quán về guideline chứ chưa cover các condition edge (đêm, mưa, ngược sáng); (e) 3 frame ADASIND không đại diện được các cảnh downtown/highway/parking đa dạng của rig 4 camera thật.

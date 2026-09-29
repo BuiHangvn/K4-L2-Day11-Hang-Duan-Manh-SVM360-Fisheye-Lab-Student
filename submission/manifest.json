@@ -1,0 +1,195 @@
+{
+  "files": [
+    {
+      "file": "00_setup/doctor.txt",
+      "lines": 5,
+      "sha256": "93b2bc553a3c009f16ddaadf231e5815b424139598346fd14038980ec96e97c9"
+    },
+    {
+      "file": "00_setup/mode.json",
+      "lines": 21,
+      "sha256": "99cbffa83cdb26b7202459b7ef6dc39b47b10763be08b4fe4a95ff418927f493"
+    },
+    {
+      "file": "00_setup/sensor_context.md",
+      "lines": 16,
+      "sha256": "c90b1374e6f8c2b653422ccf376749359e4ef588f571c23e35c94a152ff147ba"
+    },
+    {
+      "file": "parking/annotations.xml",
+      "lines": 103,
+      "sha256": "85d7cbb94512c4d9974ce20eb9b5807d5c59eb551b40a48889d1f2fdff6b9b4c"
+    },
+    {
+      "file": "parking/observations.md",
+      "lines": 26,
+      "sha256": "5b4c676d4dc2e5d37db3d2a017ca9bb9af4c91245e797b7bc9e82218c7600ee7"
+    },
+    {
+      "file": "p1_calib/annotations.xml",
+      "lines": 282,
+      "sha256": "97a1fc636e2fb55e1386921bde8b88f5006ee4a82e675cc312fcd862d0ba4dce"
+    },
+    {
+      "file": "p1_calib/lock.txt",
+      "lines": 9,
+      "sha256": "fb779564cde671b535fc9389491ad59681938d9f8027a9feeba6e38a1b40eae7",
+      "locked_at": "2026-09-29T12:52:29+07:00"
+    },
+    {
+      "file": "p1_calib/reference.txt",
+      "lines": 3,
+      "sha256": "da739fd744c408f553f9a4fa802f0b1c96d92518d8c4e5c91dfdf68234e06da8",
+      "lock_before_reveal": true
+    },
+    {
+      "file": "p1_calib/compare.md",
+      "lines": 15,
+      "sha256": "99e9f8b998ce6d0dceeab082006cde35da2600926d38a5a3ba42c7141217a373"
+    },
+    {
+      "file": "p1_calib/compare.html",
+      "lines": 30,
+      "sha256": "0d3c95d2f1b616a638c0d0e2b432f7854194feba969a8c38c96bde6fda00283a"
+    },
+    {
+      "file": "r1_craft/annotations.xml",
+      "lines": 370,
+      "sha256": "e4653f46918342c6a43b2a307ba7557ba13cc5589e8c89bde2a2dbf5d04a33da"
+    },
+    {
+      "file": "r1_craft/lock.txt",
+      "lines": 9,
+      "sha256": "0b7b392a61a7150dccfe7d7cddd9220b557efb20202093e51ec30713b7f89c13",
+      "locked_at": "2026-09-29T19:10:13+07:00"
+    },
+    {
+      "file": "r1_craft/selfqc.md",
+      "lines": 17,
+      "sha256": "62a5fdd6efafbae63d3ebef7d366d0d8c6a6b475059063d039af6d48d7a1468a"
+    },
+    {
+      "file": "r1_craft/reference.txt",
+      "lines": 3,
+      "sha256": "b4c0a7b823806ad52f24156fff4f424d22b56c3ade0b7c3980e02dd16cf44be9",
+      "lock_before_reveal": true
+    },
+    {
+      "file": "r1_craft/compare.md",
+      "lines": 27,
+      "sha256": "319895197a364b6791ce0b6b8102e7c4b17daac854be01d6dbe87e16581760e7"
+    },
+    {
+      "file": "r1_craft/compare.html",
+      "lines": 90,
+      "sha256": "1614fb278bc283164ff8b061c39c3cef4a6b5952c60d474600e0b235ed6c1aa2"
+    },
+    {
+      "file": "r2_qa/qa_review.md",
+      "lines": 18,
+      "sha256": "5653874a9dc88b61ec7bad67ebdd0fe55b01e4cfd6d1aaed3c00f6c8480ebf88"
+    },
+    {
+      "file": "r2_qa/qa_overlay.html",
+      "lines": 50,
+      "sha256": "5f2732c9b614afbe8000499410e7e8182df580a22d247aa07aa6ad175fa6b914"
+    },
+    {
+      "file": "r3_diag/local_quality.md",
+      "lines": 49,
+      "sha256": "80531d2cc655e952bd2a671e42bd484964174e32765fff0670c92050a30bb43f"
+    },
+    {
+      "file": "r3_diag/local_quality.json",
+      "lines": 311,
+      "sha256": "cc1abfc4ffd04ea686936faa26f3af78080aa720dfbdfcb13eb27e64298f1e17"
+    },
+    {
+      "file": "r3_diag/local_quality_conflicts.csv",
+      "lines": 14,
+      "sha256": "d8d5459dd02e18c45dde95dcc7cf804f0df682dbb0b405757e743b1d3edf3936"
+    },
+    {
+      "file": "r3_diag/local_quality_confusion.csv",
+      "lines": 7,
+      "sha256": "0eda1da6ff2ad326e5a877824c96e3dc52e9a682145391b88ea3cb4e2e6cfe47"
+    },
+    {
+      "file": "r3_diag/model_compare.md",
+      "lines": 46,
+      "sha256": "43e69e45a1d03e6517e8e865d0af43e2fc797b94137e860980ea7d235f0e1f88"
+    },
+    {
+      "file": "r3_diag/model_compare.html",
+      "lines": 126,
+      "sha256": "93e9acf12bc1a163d76216a45b94526c87a1ada002360f571a01f6f1cd497bef"
+    },
+    {
+      "file": "r3_diag/zone_table.md",
+      "lines": 20,
+      "sha256": "8aa695f02f771a402f70809b1933480f5c2bc7a80812c34f2c9af00b14bc2975"
+    },
+    {
+      "file": "rework/annotations-v2.xml",
+      "lines": 373,
+      "sha256": "c6079695aef0b5f93ab2a017711713fc6ff2924c25321a5b178220a960a81646"
+    },
+    {
+      "file": "rework/lock2.txt",
+      "lines": 9,
+      "sha256": "37b60e9a78a4eb9abf50a5eb5239711cf8d09faec5da6667834b42c7781bdb55",
+      "locked_at": "2026-09-29T20:33:42+07:00"
+    },
+    {
+      "file": "rework/delta.md",
+      "lines": 30,
+      "sha256": "6cbc8c57af99ee484eb9eb541a936292dd341085f13024fddab15e837bb7ee46"
+    },
+    {
+      "file": "findings.csv",
+      "lines": 45,
+      "sha256": "7c2e0c2a8cfa9dfa83a294f119f78fd8c271aaab4ffdab4842b4f2dfa4a15e02"
+    },
+    {
+      "file": "10_error_card.md",
+      "lines": 35,
+      "sha256": "9bdc03a6d8ee1ebb27372318896c5c931c8ad3cbf40201987abae0c843a3db35"
+    },
+    {
+      "file": "20_guideline_patch.md",
+      "lines": 19,
+      "sha256": "740eb10636c41861ce278d7fbadb03fe9cd9408b6b0ba00aaa08b92e430af266"
+    },
+    {
+      "file": "30_escalation_ticket.md",
+      "lines": 17,
+      "sha256": "3216bcfa1e7fd717e2f47daf967143040909f6d822424b65423f41b8af0de0ab"
+    },
+    {
+      "file": "40_decision_log.csv",
+      "lines": 9,
+      "sha256": "bb9caab269496cb22c4296663c2c8b5128862378e58440bf8afee7add1c75c49"
+    },
+    {
+      "file": "45_review_plan.md",
+      "lines": 15,
+      "sha256": "163bf6ac121969281df2e00f21a985f1c983919923e0251543592caedc9e7aab"
+    },
+    {
+      "file": "45_sampling_plan.csv",
+      "lines": 9,
+      "sha256": "b578b1eb024e17e6576c0f745ddf852ba7214ebb1e21b53d9f050a4be6f7ef66"
+    },
+    {
+      "file": "46_gold_set_plan.md",
+      "lines": 18,
+      "sha256": "399d288327d59481ef126f4f9ce2ddd76059c3480524b75837682a0c1966181a"
+    },
+    {
+      "file": "50_exit_ticket.md",
+      "lines": 13,
+      "sha256": "7ca8335c8addea3cde8f086e017ca4a61e35027235c724cb434b2694e3b10d14"
+    }
+  ],
+  "failed_gates": []
+}

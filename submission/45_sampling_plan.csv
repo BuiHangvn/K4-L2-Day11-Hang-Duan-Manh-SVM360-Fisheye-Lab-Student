@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,,TODO,TODO
-front,hard,,TODO,TODO
-rear,normal,,TODO,TODO
-rear,hard,,TODO,TODO
-left,normal,,TODO,TODO
-left,hard,,TODO,TODO
-right,normal,,TODO,TODO
-right,hard,,TODO,TODO
+front,normal,25,Thiếu độ phủ cảnh thông thường phía trước,Làm mốc so sánh các cảnh và mật độ đối tượng của camera trước
+front,hard,25,Vật nhỏ méo ở rìa hoặc bị che khuất phía trước,Lấy ca khó để kiểm box thuộc tính che khuất và vùng ignore của camera trước
+rear,normal,20,Thiếu độ phủ cảnh thông thường phía sau,Giữ mẫu nền riêng cho camera sau để so sánh với nhóm ca khó
+rear,hard,30,Vật sát xe bị che hoặc cắt ở rìa ảnh phía sau,Tăng mẫu ca khó để kiểm ego body vùng ignore và vật bị cắt biên
+left,normal,20,Thiếu độ phủ cảnh thông thường bên trái,Giữ mẫu nền riêng cho camera trái ở các cảnh và mật độ đối tượng khác nhau
+left,hard,30,Vật méo ở rìa và xuất hiện trong vùng chồng camera,Tăng mẫu ca khó để soát hình học nhãn và ghi nhận ca seam phía trái
+right,normal,20,Thiếu độ phủ cảnh thông thường bên phải,Giữ mẫu nền riêng cho camera phải ở các cảnh và mật độ đối tượng khác nhau
+right,hard,30,Vật méo ở rìa và xuất hiện trong vùng chồng camera,Tăng mẫu ca khó để soát hình học nhãn và ghi nhận ca seam phía phải

@@ -1,0 +1,311 @@
+{
+  "frames": {
+    "adasind_145860.jpg": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "outcomes": 2,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "jaccard": 1.0,
+      "dice": 1.0
+    },
+    "adasind_167700.jpg": {
+      "tp": 6,
+      "fp": 3,
+      "fn": 3,
+      "outcomes": 10,
+      "accuracy": 0.6,
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "jaccard": 0.5,
+      "dice": 0.6666666666666666
+    },
+    "adasind_199770.jpg": {
+      "tp": 3,
+      "fp": 2,
+      "fn": 6,
+      "outcomes": 10,
+      "accuracy": 0.3,
+      "precision": 0.6,
+      "recall": 0.3333333333333333,
+      "jaccard": 0.2727272727272727,
+      "dice": 0.42857142857142855
+    }
+  },
+  "labels": {
+    "Bike": {
+      "tp": 3,
+      "fp": 2,
+      "fn": 3,
+      "outcomes": 8,
+      "accuracy": 0.7727272727272727,
+      "precision": 0.6,
+      "recall": 0.5,
+      "jaccard": 0.375,
+      "dice": 0.5454545454545454
+    },
+    "Car": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "outcomes": 2,
+      "accuracy": 0.9545454545454546,
+      "precision": 1.0,
+      "recall": 0.5,
+      "jaccard": 0.5,
+      "dice": 0.6666666666666666
+    },
+    "Pedestrian": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 1,
+      "outcomes": 4,
+      "accuracy": 0.9545454545454546,
+      "precision": 1.0,
+      "recall": 0.75,
+      "jaccard": 0.75,
+      "dice": 0.8571428571428571
+    },
+    "ThreeWheeler": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 3,
+      "outcomes": 4,
+      "accuracy": 0.8636363636363636,
+      "precision": 1.0,
+      "recall": 0.25,
+      "jaccard": 0.25,
+      "dice": 0.4
+    },
+    "Truck": {
+      "tp": 3,
+      "fp": 3,
+      "fn": 1,
+      "outcomes": 7,
+      "accuracy": 0.8181818181818182,
+      "precision": 0.5,
+      "recall": 0.75,
+      "jaccard": 0.42857142857142855,
+      "dice": 0.6
+    }
+  },
+  "aggregate": {
+    "accuracy": {
+      "micro": 0.5,
+      "macro": 0.8727272727272727,
+      "worst_label": 0.7727272727272727
+    },
+    "precision": {
+      "micro": 0.6875,
+      "macro": 0.82,
+      "worst_label": 0.5
+    },
+    "recall": {
+      "micro": 0.55,
+      "macro": 0.55,
+      "worst_label": 0.25
+    },
+    "jaccard": {
+      "micro": 0.44,
+      "macro": 0.4607142857142857,
+      "worst_label": 0.25
+    },
+    "dice": {
+      "micro": 0.6111111111111112,
+      "macro": 0.6138528138528139,
+      "worst_label": 0.4
+    }
+  },
+  "counts": {
+    "tp": 11,
+    "fp": 5,
+    "fn": 9,
+    "outcomes": 22
+  },
+  "mean_iou_of_correct_matches": 0.7679198094023673,
+  "excluded_in_ignore_region": {
+    "adasind_145860.jpg": 1,
+    "adasind_167700.jpg": 1,
+    "adasind_199770.jpg": 1
+  },
+  "conflicts": [
+    {
+      "frame": "adasind_167700.jpg",
+      "type": "mismatching_attributes",
+      "left": 7,
+      "reference": 8,
+      "left_label": "Truck",
+      "reference_label": "Truck",
+      "iou": "0.915"
+    },
+    {
+      "frame": "adasind_167700.jpg",
+      "type": "mismatching_label",
+      "left": 4,
+      "reference": 6,
+      "left_label": "Truck",
+      "reference_label": "ThreeWheeler",
+      "iou": "0.894"
+    },
+    {
+      "frame": "adasind_167700.jpg",
+      "type": "mismatching_label",
+      "left": 8,
+      "reference": 4,
+      "left_label": "Truck",
+      "reference_label": "Car",
+      "iou": "0.831"
+    },
+    {
+      "frame": "adasind_167700.jpg",
+      "type": "extra_annotation",
+      "left": 1,
+      "reference": "",
+      "left_label": "Bike",
+      "reference_label": "",
+      "iou": "N/A"
+    },
+    {
+      "frame": "adasind_167700.jpg",
+      "type": "missing_annotation",
+      "left": "",
+      "reference": 9,
+      "left_label": "",
+      "reference_label": "Bike",
+      "iou": "N/A"
+    },
+    {
+      "frame": "adasind_199770.jpg",
+      "type": "mismatching_label",
+      "left": 6,
+      "reference": 8,
+      "left_label": "Truck",
+      "reference_label": "ThreeWheeler",
+      "iou": "0.905"
+    },
+    {
+      "frame": "adasind_199770.jpg",
+      "type": "mismatching_attributes",
+      "left": 5,
+      "reference": 2,
+      "left_label": "ThreeWheeler",
+      "reference_label": "ThreeWheeler",
+      "iou": "0.648"
+    },
+    {
+      "frame": "adasind_199770.jpg",
+      "type": "extra_annotation",
+      "left": 1,
+      "reference": "",
+      "left_label": "Bike",
+      "reference_label": "",
+      "iou": "N/A"
+    },
+    {
+      "frame": "adasind_199770.jpg",
+      "type": "missing_annotation",
+      "left": "",
+      "reference": 3,
+      "left_label": "",
+      "reference_label": "Pedestrian",
+      "iou": "N/A"
+    },
+    {
+      "frame": "adasind_199770.jpg",
+      "type": "missing_annotation",
+      "left": "",
+      "reference": 4,
+      "left_label": "",
+      "reference_label": "ThreeWheeler",
+      "iou": "N/A"
+    },
+    {
+      "frame": "adasind_199770.jpg",
+      "type": "missing_annotation",
+      "left": "",
+      "reference": 5,
+      "left_label": "",
+      "reference_label": "Bike",
+      "iou": "N/A"
+    },
+    {
+      "frame": "adasind_199770.jpg",
+      "type": "missing_annotation",
+      "left": "",
+      "reference": 6,
+      "left_label": "",
+      "reference_label": "Bike",
+      "iou": "N/A"
+    },
+    {
+      "frame": "adasind_199770.jpg",
+      "type": "missing_annotation",
+      "left": "",
+      "reference": 7,
+      "left_label": "",
+      "reference_label": "Truck",
+      "iou": "N/A"
+    }
+  ],
+  "confusion": {
+    "Bike": {
+      "Bike": 3,
+      "Car": 0,
+      "Pedestrian": 0,
+      "ThreeWheeler": 0,
+      "Truck": 0,
+      "<missing>": 3
+    },
+    "Car": {
+      "Bike": 0,
+      "Car": 1,
+      "Pedestrian": 0,
+      "ThreeWheeler": 0,
+      "Truck": 1,
+      "<missing>": 0
+    },
+    "Pedestrian": {
+      "Bike": 0,
+      "Car": 0,
+      "Pedestrian": 3,
+      "ThreeWheeler": 0,
+      "Truck": 0,
+      "<missing>": 1
+    },
+    "ThreeWheeler": {
+      "Bike": 0,
+      "Car": 0,
+      "Pedestrian": 0,
+      "ThreeWheeler": 1,
+      "Truck": 2,
+      "<missing>": 1
+    },
+    "Truck": {
+      "Bike": 0,
+      "Car": 0,
+      "Pedestrian": 0,
+      "ThreeWheeler": 0,
+      "Truck": 3,
+      "<missing>": 1
+    },
+    "<extra>": {
+      "Bike": 2,
+      "Car": 0,
+      "Pedestrian": 0,
+      "ThreeWheeler": 0,
+      "Truck": 0,
+      "<missing>": 0
+    }
+  },
+  "slice": "B3-dense",
+  "frames_evaluated": [
+    "adasind_145860.jpg",
+    "adasind_167700.jpg",
+    "adasind_199770.jpg"
+  ],
+  "frames_missing_from_export": [],
+  "locked_sha256": "e4653f46918342c6a43b2a307ba7557ba13cc5589e8c89bde2a2dbf5d04a33da",
+  "iou_threshold": 0.5
+}

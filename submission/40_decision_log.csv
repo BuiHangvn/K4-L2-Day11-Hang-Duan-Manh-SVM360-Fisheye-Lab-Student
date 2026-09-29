@@ -1,1 +1,9 @@
 id,date,question,decision,rationale,status
+D01,2026-09-29,adasind_167700.jpg L5 Pedestrian góc phải cao là ego_body hay người thật?,Xoá box và thêm polygon ignore_region ego_body,Compare xác nhận L5 nằm hoàn toàn trong ref ego_body (922;747)-(1077;1443); QA đã nghi từ trước dựa trên tả ban đầu áo trắng bên phải,resolved
+D02,2026-09-29,adasind_199770.jpg L4 Truck góc phải cao là ego_body hay xe tải?,Xoá box,Compare xác nhận L4 nằm trong ref ego_body (924;813)-(1080;1552); polygon ego_body phải Hằng đã vẽ sẽ ignore vùng này đúng sau rework,resolved
+D03,2026-09-29,adasind_199770.jpg R4 ThreeWheeler nằm trong ego_body ref - ai đúng?,Escalate cho data_ops,Ref mâu thuẫn nội tại (box hợp lệ trong ignore vi phạm R09); không thể quyết định trong phạm vi học viên,escalated
+D04,2026-09-29,adasind_199770.jpg R7 gán Truck có đúng class không?,Escalate cho data_ops và guideline,Vật xa mờ 64x45px zone mid; L và M đều không thấy; cần soi phóng to trước khi rework,escalated
+D05,2026-09-29,adasind_145860.jpg L2 Truck nằm trong ignore reason=unreadable của ref - có nên xoá?,Keep with reason,Vùng unreadable ref chỉ 43x49px trùng chính xác box L2; nếu vùng thực sự không đọc được thì box thừa; nhưng không đổi output tính điểm vì IGNORE; giữ để soi thêm,resolved
+D06,2026-09-29,Có làm K12 polygon fill không?,Không (degrade),Ưu tiên vẽ box + ego_body đúng trước; K12 là bonus không bắt buộc; ghi nhận trong fill ratio note,resolved
+D07,2026-09-29,Nhóm dùng file Mạnh làm bài Hằng?,Không - mỗi người tự làm slice mình,Slice khác nhau (B3-dense vs B2-edge); README yêu cầu mỗi học viên tự gán nhãn; dùng file người khác sẽ hỏng compare và bị trừ điểm gian lận,resolved
+D08,2026-09-29,Cold review vs peer review ở P3?,Cold review chính r1_craft,Duẩn chưa có file khoá B1-dense; theo docs/03-roles-rotation-vi.md cold review sau nghỉ 5 phút khi solo/chờ,resolved
