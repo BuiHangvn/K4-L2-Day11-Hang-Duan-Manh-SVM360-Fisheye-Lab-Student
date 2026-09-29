@@ -8,17 +8,17 @@
 - Máy giữ hồ sơ chính / người quản lý: manh
 - Slice chung lấy từ mode.json: B2-edge
 - Tên định danh vai A dùng cho --self: manh
-- Kênh trao đổi nội bộ: [Điền kênh: Zalo / Discord / Teams]
-- Đại diện nộp (vai C): [Họ tên, MSSV của bạn C]
+- Kênh trao đổi nội bộ: Zalo
+- Đại diện nộp (vai C): Bùi Thu Hằng - 2A202602139
 - Commit chốt bài: 611acfa
 
 ## 2. Ba vai chính
 
 | Vai | Họ và tên | MSSV | Tên định danh trong mode | Trách nhiệm | Bằng chứng đóng góp |
 |---|---|---|---|---|---|
-| A · Gán nhãn | Mạnh | [Điền MSSV] | manh | Parking/C0/slice B2-edge, self-QC, lock, rework | submission/r1_craft/lock.txt (Mã: 133E-FE7F), findings.csv |
-| B · QA độc lập | [Điền tên bạn B] | [Điền MSSV] | [duan/hang] | Review trước reference, finding QA, kiểm lại ca sửa | submission/r2_qa/qa_review.md, findings.csv (round r2_qa) |
-| C · Chẩn đoán & điều phối | [Điền tên bạn C] | [Điền MSSV] | [hang/duan] | Báo cáo, phân xử, kế hoạch, tích hợp, check và nộp | submission/r3_diag/, sampling_plan, decision_log, check |
+| A · Gán nhãn | Nguyễn Hùng Mạnh | 2A202602062 | manh | Parking/C0/slice B2-edge, self-QC, lock, rework | submission/r1_craft/lock.txt (Mã: 133E-FE7F), findings.csv |
+| B · QA độc lập | Trần Anh Duẩn | 2A202602103 | duan | Review trước reference, finding QA, kiểm lại ca sửa | submission/r2_qa/qa_review.md, findings.csv (round r2_qa) |
+| C · Chẩn đoán & điều phối | Bùi Thu Hằng | 2A202602139 | hang | Báo cáo, phân xử, kế hoạch, tích hợp, check và nộp | submission/r3_diag/, sampling_plan, decision_log, check |
 
 ## 3. Bàn giao theo pha
 
