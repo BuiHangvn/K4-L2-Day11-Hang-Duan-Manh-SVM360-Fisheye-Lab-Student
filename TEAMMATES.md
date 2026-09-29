@@ -26,23 +26,24 @@
 |---|---|---|---|---|
 | P0 · Chốt môi trường và vai | C → A, B | mode.json, slice B2-edge | Kiểm tra slice chung và môi trường CVAT | Đã hoàn thành |
 | P2 · Khóa bản đầu | A → B, C | submission/r1_craft/annotations.xml, lock.txt, mã: 133E-FE7F | Kiểm tra 18 box, 9 polygon, 9 checklist selfqc | Đã hoàn thành, bàn giao cho B |
-| P3 · Chốt QA mù | B → C, A | qa_review.md, findings.csv (r2_qa), screenshots | [B điền sau khi chạy QA] | [Đang tiến hành] |
-| P4 · Quyết định sửa | C → A, B | local_quality, model_compare, decision_log.csv | [C điền sau phân xử] | [Chờ P3] |
-| P5 · Kiểm bản sửa | A → B → C | annotations-v2.xml, lock2.txt, delta.md | [B kiểm lại box đã sửa] | [Chờ P4] |
-| P6 · Chốt nộp | A, B → C | manifest.json, commit chốt | [Cả nhóm duyệt trước khi nộp] | [Chờ P5] |
+| P3 · Chốt QA mù | B → C, A | qa_review.md, findings.csv (r2_qa), screenshots | Kiểm tra 18 box, 3 frame slice B2-edge mã 133E-FE7F | Đã hoàn thành (commit f5800d5) |
+| P4 · Quyết định sửa | C → A, B | local_quality, model_compare, decision_log.csv | Đối chiếu L, R, M, lập 4 quyết định và 1 escalation | Đã hoàn thành |
+| P5 · Kiểm bản sửa | A → B → C | annotations-v2.xml, lock2.txt (6FBB-958A), delta.md | Kiểm tra ca sửa Truck L4 và delta cải thiện | Đã hoàn thành |
+| P6 · Chốt nộp | A, B → C | manifest.json, commit chốt | Kiểm tra toàn bộ hồ sơ, check exit 0 | Đã sẵn sàng nộp |
 
 ## 4. Bất đồng và phối hợp
 
-- Một ca đã phân xử: [Sẽ điền ở P4: Frame/object/rule; ý kiến A/B; bằng chứng; quyết định]
-- Ca còn mở: [Nếu không còn thì ghi "không có"]
-- Đóng góp của A/B/C vào kế hoạch và exit ticket: [A hỗ trợ giải trình nhãn; B soát screenshot; C soạn kế hoạch]
+- Một ca đã phân xử: Frame `adasind_102750.jpg`, đối tượng `L4` ở rìa mép kính bị cắt biên; ban đầu A gán `ThreeWheeler`, B và Reference xác định là `Truck`; đối chiếu ảnh gốc có cấu trúc thùng xe tải nhẹ; quyết định sửa nhãn thành `Truck` ở P5.
+- Ca còn mở: không có
+- Đóng góp của A/B/C vào kế hoạch và exit ticket: [A giải trình nhãn và sửa rework; B soát checklist và QA độc lập; C chẩn đoán, điều phối và hoàn thiện hồ sơ]
 - Thay đổi phân công nếu có: không có
 
 ## 5. Xác nhận trước khi nộp
 
-- [ ] A xác nhận nhãn và export đúng phiên bản: Mạnh / submission/r1_craft/lock.txt
-- [ ] B xác nhận đã QA độc lập trước reference và kiểm lại ca sửa: [Tên B]
-- [ ] C xác nhận báo cáo đúng bản khóa, các file đầy đủ và check exit 0: [Tên C]
-- [ ] manifest.json tại commit chốt có failed_gates rỗng.
-- [ ] Repo nhóm Public, ảnh và các bằng chứng mở được.
+- [x] A xác nhận nhãn và export đúng phiên bản: Mạnh / submission/r1_craft/lock.txt
+- [x] B xác nhận đã QA độc lập trước reference và kiểm lại ca sửa: Duẩn / submission/r2_qa/qa_review.md
+- [x] C xác nhận báo cáo đúng bản khóa, các file đầy đủ và check exit 0: Hằng / manifest.json
+- [x] manifest.json tại commit chốt có failed_gates rỗng.
+- [x] Repo nhóm Public, ảnh và các bằng chứng mở được.
 - [ ] C đã push và gửi link repo nhóm + commit qua kênh lớp công bố.
+
