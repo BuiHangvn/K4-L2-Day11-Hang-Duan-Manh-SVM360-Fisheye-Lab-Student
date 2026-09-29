@@ -1,1 +1,8 @@
 round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
+calib,C0,adasind_019560.jpg,L7+R4,na,ATTRIBUTE,,,,,,,,
+calib,C0,adasind_019560.jpg,L5,na,SPURIOUS,,,,,,,,
+calib,C0,adasind_019560.jpg,L6,na,SPURIOUS,,,,,,,,
+calib,C0,adasind_019560.jpg,L8+R5,na,WRONG_CLASS,,,,,,,,
+r1_craft,B2-edge,adasind_069450.jpg,L5,na,BOX_GEOMETRY,,P1,annotator,R05,Vật ThreeWheeler ở vùng edge bị méo quang học mạnh,keep_with_reason,1.0.0,Nắn box bám sát phần nhìn thấy
+r1_craft,B2-edge,adasind_082170.jpg,L4,na,ATTRIBUTE,,P2,annotator,R04,Rider ngồi trên xe hai bánh ở center zone,keep_with_reason,1.0.0,Gộp chung một box Bike theo R04
+r1_craft,B2-edge,adasind_102750.jpg,L2,na,ATTRIBUTE,,P1,annotator,R07,Đầu xe Truck bị cắt bởi khung hình ở mid zone,keep_with_reason,1.0.0,Bật thuộc tính truncated do bị cắt biên
