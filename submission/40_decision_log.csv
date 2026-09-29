@@ -1,1 +1,5 @@
-id,date,question,decision,rationale,status
+﻿id,date,question,decision,rationale,status
+D01,2026-09-29,Frame 102750: L4 (ThreeWheeler) vs R2 (Truck) o vung edge,Sua nhan L4 thanh Truck o P5,Doi chieu anh goc thay xe tai thung kin bi cat bien; L gan nham ThreeWheeler,resolved
+D02,2026-09-29,Frame 102750: L6 xe ThreeWheeler o xa kho xac dinh chieu cao,Bao cao escalate lam ro nguong do phan giai cho vat the o xa,Vat the o xa bi nhoe va meo do thau kinh fisheye kho do chinh xac chieu cao tren 40px,escalated
+D03,2026-09-29,Frame 082170: R5 Bike o sat vanh kinh ngoai L khong ve,Giu nguyen khong bo sung vi nam ngoai pham vi ro rang,Vat the bi meo quang hoc cuc nang o ria ngoai vanh kinh theo R05,resolved
+D04,2026-09-29,Frame 069450: L5 ThreeWheeler bi meo quang hoc sat mep trai,Giu nguyen nhan L5 vi khop 100% voi Reference,Box da bao tron phan nhin thay cua xe theo R02 va R05,resolved

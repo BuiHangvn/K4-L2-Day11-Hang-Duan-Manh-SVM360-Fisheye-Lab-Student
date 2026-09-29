@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,,TODO,TODO
-front,hard,,TODO,TODO
-rear,normal,,TODO,TODO
-rear,hard,,TODO,TODO
-left,normal,,TODO,TODO
-left,hard,,TODO,TODO
-right,normal,,TODO,TODO
-right,hard,,TODO,TODO
+front,normal,30,low,Duong thang xe phia truoc it bien dang quang hoc
+front,hard,20,high,Nguoc sang buoi toi va phuong tien cat ngang bat ngo
+rear,normal,30,low,Lui xe trong bai do toc do thap dieu kien du sang
+rear,hard,20,high,Khuat goc cheo va vat can thap sat duoi xe
+left,normal,30,medium,Quan sat xe song song o lan ben canh
+left,hard,20,high,Bien dang ria kinh cuc nang va nguoi di bo cat bien trai
+right,normal,30,medium,Quan sat le duong va xe hai banh vuot phai
+right,hard,20,high,Bien dang ria kinh thau kinh phu mep duong va diem mu

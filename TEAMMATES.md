@@ -45,5 +45,5 @@
 - [x] C xác nhận báo cáo đúng bản khóa, các file đầy đủ và check exit 0: Hằng / manifest.json
 - [x] manifest.json tại commit chốt có failed_gates rỗng.
 - [x] Repo nhóm Public, ảnh và các bằng chứng mở được.
-- [ ] C đã push và gửi link repo nhóm + commit qua kênh lớp công bố.
+- [X] C đã push và gửi link repo nhóm + commit qua kênh lớp công bố.
 

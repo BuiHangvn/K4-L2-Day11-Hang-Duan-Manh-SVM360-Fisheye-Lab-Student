@@ -1,4 +1,4 @@
-﻿round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
+round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
 calib,C0,adasind_019560.jpg,L7+R4,na,ATTRIBUTE,,,,,,,,
 calib,C0,adasind_019560.jpg,L5,na,SPURIOUS,,,,,,,,
 calib,C0,adasind_019560.jpg,L6,na,SPURIOUS,,,,,,,,
@@ -9,3 +9,34 @@ r1_craft,B2-edge,adasind_102750.jpg,L2,na,ATTRIBUTE,,P1,annotator,R07,Đầu xe 
 r2_qa,B2-edge,adasind_069450.jpg,L5,L_only,STRUCTURE,,P3,qa,R02,submission/findings.csv;docs/02-rules-vi.md;submission/r2_qa/qa_overlay.html,,1.0.0,Dòng r1_craft L5 mô tả BOX_GEOMETRY nhưng dẫn R05 (truncated/occluded); quy tắc hình học đúng là R02. Đây là lỗi dẫn rule trong hồ sơ; chưa kết luận box sai.
 r2_qa,B2-edge,adasind_082170.jpg,L4,L_only,STRUCTURE,,P3,qa,R03,submission/findings.csv;docs/02-rules-vi.md;submission/r2_qa/qa_overlay.html,,1.0.0,Dòng r1_craft L4 mô tả gộp rider và Bike nhưng dẫn R04; quy tắc rider đúng là R03. Không phát hiện lỗi tách rider riêng trong XML.
 r2_qa,B2-edge,adasind_102750.jpg,L2,L_only,STRUCTURE,,P3,qa,R05,submission/findings.csv;submission/r1_craft/annotations.xml;docs/02-rules-vi.md,,1.0.0,Dòng r1_craft L2 mô tả truncated nhưng dẫn R07 (ego_body); R05 là quy tắc truncated. XML có truncated=true; lỗi dẫn rule chứ không phải lỗi attribute.
+r1_craft,B2-edge,adasind_082170.jpg,R5,na,MISSING,,,,,,,,
+r1_craft,B2-edge,adasind_102750.jpg,L3,na,SPURIOUS,,,,,,,,
+r1_craft,B2-edge,adasind_102750.jpg,L4+R2,na,WRONG_CLASS,,,,,,,,
+r1_craft,B2-edge,adasind_102750.jpg,L6,na,SPURIOUS,,,,,,,,
+r1_craft,B2-edge,adasind_102750.jpg,R5,na,MISSING,,,,,,,,
+r3_diag,B2-edge,adasind_069450.jpg,L5+R1,LR_noM,MISSING,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model bo sot vat the nguoi va reference deu nhin thay
+r3_diag,B2-edge,adasind_069450.jpg,L1+R2,LR_noM,MISSING,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model bo sot vat the nguoi va reference deu nhin thay
+r3_diag,B2-edge,adasind_069450.jpg,M5,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model YOLO false positive tren anh fisheye do bien dang thau kinh
+r3_diag,B2-edge,adasind_069450.jpg,M7,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model YOLO false positive tren anh fisheye do bien dang thau kinh
+r3_diag,B2-edge,adasind_082170.jpg,L2+R1,LR_noM,MISSING,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model bo sot vat the nguoi va reference deu nhin thay
+r3_diag,B2-edge,adasind_082170.jpg,L3+R7,LR_noM,MISSING,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model bo sot vat the nguoi va reference deu nhin thay
+r3_diag,B2-edge,adasind_082170.jpg,L5+R2,LR_noM,MISSING,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model bo sot vat the nguoi va reference deu nhin thay
+r3_diag,B2-edge,adasind_082170.jpg,L1+R4,LR_noM,MISSING,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model bo sot vat the nguoi va reference deu nhin thay
+r3_diag,B2-edge,adasind_082170.jpg,R5,R_only,MISSING,E3_data_defect,P2,data_ops,R05,submission/r1_craft/compare.md,keep_with_reason,,Vat the sat mep ngoai kinh bi cat vien cuc nang
+r3_diag,B2-edge,adasind_082170.jpg,M2,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model YOLO false positive tren anh fisheye do bien dang thau kinh
+r3_diag,B2-edge,adasind_082170.jpg,M5,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model YOLO false positive tren anh fisheye do bien dang thau kinh
+r3_diag,B2-edge,adasind_082170.jpg,M6,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model YOLO false positive tren anh fisheye do bien dang thau kinh
+r3_diag,B2-edge,adasind_082170.jpg,M7,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model YOLO false positive tren anh fisheye do bien dang thau kinh
+r3_diag,B2-edge,adasind_082170.jpg,M9,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model YOLO false positive tren anh fisheye do bien dang thau kinh
+r3_diag,B2-edge,adasind_102750.jpg,L1+R3,LR_noM,MISSING,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model bo sot vat the nguoi va reference deu nhin thay
+r3_diag,B2-edge,adasind_102750.jpg,L5+R4,LR_noM,MISSING,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model bo sot vat the nguoi va reference deu nhin thay
+r3_diag,B2-edge,adasind_102750.jpg,L3,L_only,SPURIOUS,E1_annotator_error,P1,annotator,R02,submission/r3_diag/local_quality_conflicts.csv,rework,,Box ve thua can kiem tra lai o rework
+r3_diag,B2-edge,adasind_102750.jpg,L4,L_only,SPURIOUS,E1_annotator_error,P0,annotator,R02,submission/r3_diag/local_quality_conflicts.csv,rework,,Annotator gan nham ThreeWheeler thay vi Truck o vung edge
+r3_diag,B2-edge,adasind_102750.jpg,L6,L_only,SPURIOUS,E2_guideline_gap,P2,guideline,R01,submission/r3_diag/local_quality_conflicts.csv,escalate,,Vat the o xa bi mo can lam ro nguong kich thuoc trong guideline
+r3_diag,B2-edge,adasind_102750.jpg,R2+M2,RM_noL,MISSING,E1_annotator_error,P1,annotator,R02,submission/r3_diag/model_compare.html,rework,,Reference va Model deu co box nhung L bo sot
+r3_diag,B2-edge,adasind_102750.jpg,R5+M8,RM_noL,MISSING,E1_annotator_error,P1,annotator,R02,submission/r3_diag/model_compare.html,rework,,Reference va Model deu co box nhung L bo sot
+r3_diag,B2-edge,adasind_102750.jpg,M3,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model YOLO false positive tren anh fisheye do bien dang thau kinh
+r3_diag,B2-edge,adasind_102750.jpg,M4,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model YOLO false positive tren anh fisheye do bien dang thau kinh
+r3_diag,B2-edge,adasind_102750.jpg,M5,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model YOLO false positive tren anh fisheye do bien dang thau kinh
+r3_diag,B2-edge,adasind_102750.jpg,M6,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model YOLO false positive tren anh fisheye do bien dang thau kinh
+r3_diag,B2-edge,adasind_102750.jpg,M7,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,submission/r3_diag/model_compare.html,keep_with_reason,,Model YOLO false positive tren anh fisheye do bien dang thau kinh

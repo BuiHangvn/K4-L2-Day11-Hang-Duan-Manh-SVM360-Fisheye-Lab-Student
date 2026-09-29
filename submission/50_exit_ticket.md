@@ -1,0 +1,11 @@
+# Exit ticket
+
+Đọc `docs/10-svm360-reading-vi.md` trước khi trả lời câu 1–2. Các câu về zone, `why`, rework, parking và sampling
+đã nằm trong file tương ứng nên không hỏi lại ở đây.
+
+1. Một vật ở vùng seam giữa hai camera thật xuất hiện với hai box khác nhau: đó là lỗi `DUPLICATE` hay cần một quy
+   tắc riêng? Vì sao? Đây không phải là lỗi DUPLICATE mà cần một quy tắc riêng (cross-camera association rule). Bởi vì trên ảnh mắt cá thô 2D, mỗi camera chụp từ một góc nhìn vật lý riêng biệt với độ biến dạng quang học khác nhau tại vùng chồng lấn (overlap). Nếu coi là DUPLICATE và xóa đi một box thì model phát hiện đối tượng trên camera tương ứng sẽ bị mất mục tiêu (FN). Quy tắc chuẩn là giữ nguyên box trên từng ảnh 2D của mỗi camera và liên kết chúng bằng cùng một Global Object ID, hoặc hợp nhất đối tượng trong không gian nhìn từ trên cao (BEV).
+2. Một vật đi qua nhiều frame trên cùng camera: khi nào giữ cùng track ID, khi nào thêm keyframe hoặc trạng thái
+   Outside? Nêu bằng chứng sẽ cần trước khi nối track qua hai camera. Giữ cùng track ID khi đối tượng di chuyển liên tục và nhận diện được qua các frame liền kề. Thêm keyframe khi đối tượng thay đổi hướng di chuyển, góc nhìn hoặc kích thước đột ngột. Gán trạng thái Outside khi đối tượng đi ra khỏi trường nhìn của camera hoặc bị che khuất hoàn toàn quá số frame quy định (ví dụ >10 frame). Bằng chứng cần trước khi nối track qua hai camera: đồng bộ timestamp chính xác giữa các cảm biến (<10ms), đường chiếu hình học (epipolar geometry) tại vùng overlap, và độ tương đồng về đặc trưng hình ảnh/màu sắc (Re-ID feature).
+3. Nhìn lại cả buổi: một chỗ bạn tin nhãn mình đúng nhưng reference hoặc người soát nghĩ khác (dẫn frame/`object_ref`),
+   bạn đã xử lý thế nào, và nếu làm lại slice này bạn sẽ đổi gì trong cách làm? Tại frame `adasind_102750.jpg`, đối tượng `L4` ở rìa mép kính bị cắt biên nặng, tôi gán `ThreeWheeler` do nhìn thấy đầu xe có dạng tròn nhọn và 1 bánh lộ ra, trong khi Reference và Model đều xác định là `Truck` nhỏ. Sau khi thảo luận nhóm ở P4 và soi kỹ lại phần thùng xe phía sau, tôi chấp nhận sửa sang `Truck` ở P5 để đảm bảo tính nhất quán với ngữ cảnh và kích thước xe tải nhẹ. Nếu làm lại slice này, tôi sẽ phóng to ảnh gốc kiểm tra cấu trúc thùng xe và đối chiếu quy tắc cắt biên R05 kỹ hơn ngay từ vòng tự soát P2 trước khi chốt khóa bản đầu.
