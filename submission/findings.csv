@@ -1,4 +1,4 @@
-round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
+﻿round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
 calib,C0,adasind_019560.jpg,L7+R4,na,ATTRIBUTE,,,,,,,,
 calib,C0,adasind_019560.jpg,L5,na,SPURIOUS,,,,,,,,
 calib,C0,adasind_019560.jpg,L6,na,SPURIOUS,,,,,,,,
@@ -6,3 +6,6 @@ calib,C0,adasind_019560.jpg,L8+R5,na,WRONG_CLASS,,,,,,,,
 r1_craft,B2-edge,adasind_069450.jpg,L5,na,BOX_GEOMETRY,,P1,annotator,R05,Vật ThreeWheeler ở vùng edge bị méo quang học mạnh,keep_with_reason,1.0.0,Nắn box bám sát phần nhìn thấy
 r1_craft,B2-edge,adasind_082170.jpg,L4,na,ATTRIBUTE,,P2,annotator,R04,Rider ngồi trên xe hai bánh ở center zone,keep_with_reason,1.0.0,Gộp chung một box Bike theo R04
 r1_craft,B2-edge,adasind_102750.jpg,L2,na,ATTRIBUTE,,P1,annotator,R07,Đầu xe Truck bị cắt bởi khung hình ở mid zone,keep_with_reason,1.0.0,Bật thuộc tính truncated do bị cắt biên
+r2_qa,B2-edge,adasind_069450.jpg,L5,L_only,STRUCTURE,,P3,qa,R02,submission/findings.csv;docs/02-rules-vi.md;submission/r2_qa/qa_overlay.html,,1.0.0,Dòng r1_craft L5 mô tả BOX_GEOMETRY nhưng dẫn R05 (truncated/occluded); quy tắc hình học đúng là R02. Đây là lỗi dẫn rule trong hồ sơ; chưa kết luận box sai.
+r2_qa,B2-edge,adasind_082170.jpg,L4,L_only,STRUCTURE,,P3,qa,R03,submission/findings.csv;docs/02-rules-vi.md;submission/r2_qa/qa_overlay.html,,1.0.0,Dòng r1_craft L4 mô tả gộp rider và Bike nhưng dẫn R04; quy tắc rider đúng là R03. Không phát hiện lỗi tách rider riêng trong XML.
+r2_qa,B2-edge,adasind_102750.jpg,L2,L_only,STRUCTURE,,P3,qa,R05,submission/findings.csv;submission/r1_craft/annotations.xml;docs/02-rules-vi.md,,1.0.0,Dòng r1_craft L2 mô tả truncated nhưng dẫn R07 (ego_body); R05 là quy tắc truncated. XML có truncated=true; lỗi dẫn rule chứ không phải lỗi attribute.
