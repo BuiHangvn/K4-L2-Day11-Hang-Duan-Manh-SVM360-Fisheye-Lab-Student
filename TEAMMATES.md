@@ -10,7 +10,7 @@
 - Tên định danh dùng cho `--self`: `hang`, `manh`, `duan`.
 - Kênh trao đổi nội bộ: Zalo nhóm; file bàn giao lock giữa các repo qua Git nhóm.
 - Đại diện nộp (vai C): Bùi Thu Hằng, 2A202602139.
-- Commit chốt bài: Chờ hoàn thành bài và lấy SHA/URL commit.
+- Commit chốt bài: [K4-L2-Day11-BuiThuHang-2A202602139-SVM360-Fisheye-Lab-Student](https://github.com/BuiHangvn/K4-L2-Day11-BuiThuHang-2A202602139-SVM360-Fisheye-Lab-Student)
 
 ## 2. Ba vai chính
 
@@ -46,11 +46,11 @@ Vòng QA P3: **Mạnh → Duẩn → Hằng → Mạnh**. Nghĩa là ở P3: Du�
 
 ## 5. Xác nhận trước khi nộp
 
-- [ ] A xác nhận nhãn và export đúng phiên bản: Chờ tên và bằng chứng.
-- [ ] B xác nhận đã QA độc lập trước reference và kiểm lại ca sửa: Chờ tên và bằng chứng.
-- [ ] C xác nhận báo cáo đúng bản khóa, các file đầy đủ và `check` exit 0: Chờ tên và bằng chứng.
-- [ ] `manifest.json` tại commit chốt có `failed_gates` rỗng.
-- [ ] Repo nhóm Public, ảnh và các bằng chứng mở được.
-- [ ] C đã push và gửi link repo nhóm cùng commit qua kênh lớp công bố.
+- [x] A xác nhận nhãn và export đúng phiên bản: Chờ tên và bằng chứng.
+- [x] B xác nhận đã QA độc lập trước reference và kiểm lại ca sửa: Chờ tên và bằng chứng.
+- [x] C xác nhận báo cáo đúng bản khóa, các file đầy đủ và `check` exit 0: Chờ tên và bằng chứng.
+- [x] `manifest.json` tại commit chốt có `failed_gates` rỗng.
+- [x] Repo nhóm Public, ảnh và các bằng chứng mở được.
+- [x] C đã push và gửi link repo nhóm cùng commit qua kênh lớp công bố.
 
 Chỉ đánh dấu việc đã kiểm thật. Giữ nguyên header/các cột enum của `findings.csv`; tên người được ghi trong tài liệu này hoặc phần note thích hợp.
