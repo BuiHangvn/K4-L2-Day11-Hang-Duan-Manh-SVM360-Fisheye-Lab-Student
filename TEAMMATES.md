@@ -10,7 +10,7 @@
 - Tên định danh vai A dùng cho --self: manh
 - Kênh trao đổi nội bộ: [Điền kênh: Zalo / Discord / Teams]
 - Đại diện nộp (vai C): [Họ tên, MSSV của bạn C]
-- Commit chốt bài: [Sẽ điền sau khi chốt P6]
+- Commit chốt bài: 611acfa
 
 ## 2. Ba vai chính
 
